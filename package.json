@@ -12,6 +12,7 @@
     "vite": "^2.4.4"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
     "vue": "^3.2.11"
   }
 }
