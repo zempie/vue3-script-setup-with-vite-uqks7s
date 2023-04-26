@@ -8,11 +8,10 @@ const imgSrc = ref()
 async function convertExcel() {
   const editorContent = editorRef.value.textContent
   if (editorContent) {
-    const divNode = document.getElementById('editor')
+    const divNode = editorRef.value
 
     html2canvas(editorRef.value).then((canvas) => {
       const cv = document.getElementsByTagName('canvas')
-      console.log(cv)
       if (cv.length) {
         cv.remove()
       }
@@ -25,7 +24,7 @@ async function convertExcel() {
 
 function reset() {
   imgSrc.value = ''
-  editorRef.value = ''
+  editorRef.value.innerText = ''
   const canvasList = document.getElementsByTagName('canvas')
   for (let i = 0; i < canvasList.length; i++) {
     canvasList[i].remove()
