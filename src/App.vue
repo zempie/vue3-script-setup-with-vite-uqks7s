@@ -32,7 +32,7 @@ async function convertExcel() {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 div#editor,
 #capture {
   padding: 16px 24px;
